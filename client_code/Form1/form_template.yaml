@@ -7,8 +7,63 @@ components:
   properties: {col_widths: '{}'}
   name: content_panel
   layout_properties: {slot: default}
-  components: []
+  components:
+  - name: label_8
+    properties: {text: MEMBERSHIP FORM, bold: true, font_size: 18, align: center,
+      underline: true}
+    type: Label
+    layout_properties: {grid_position: 'YNDXTN,LUGXVW'}
+  - name: label_1
+    properties: {text: Enter your Name, align: left, bold: true, font: '20', font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'JBYDWB,MBYQFI'}
+    data_bindings:
+    - {property: font, code: '', writeback: false}
+  - name: text_box_1
+    properties: {placeholder: your name, hide_text: false}
+    type: TextBox
+    layout_properties: {grid_position: 'CRGHTD,ZUYMCY'}
+  - name: label_2
+    properties: {text: Gender, bold: true, font_size: 16}
+    type: Label
+    layout_properties: {grid_position: 'HDSCYP,VATLDV'}
+  - name: drop_down_1
+    properties:
+      items: [Select, Male, female]
+    type: DropDown
+    layout_properties: {grid_position: 'IAHPYZ,WKTDSU'}
+  - name: label_7
+    properties: {text: 'Do you need personal training?', font_size: 19, bold: true}
+    type: Label
+    layout_properties: {grid_position: 'GCGZPY,LYJDRI'}
+  - name: check_box_1
+    properties: {text: 'yes', bold: false}
+    type: CheckBox
+    layout_properties: {grid_position: 'VQHQIJ,DGRFOI'}
+  - name: outlined_button_1
+    properties: {text: Submit, role: outlined-button, italic: true, align: center}
+    type: Button
+    layout_properties: {grid_position: 'IHDLSI,DSTOEK'}
+    event_bindings: {click: outlined_button_1_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+  components:
+  - name: label_4
+    properties: {text: Home, icon_align: left, align: left, font_size: 12, bold: true}
+    type: Label
+    layout_properties: {}
+  - name: label_5
+    properties: {text: About, font_size: 12, bold: true}
+    type: Label
+    layout_properties: {}
+  - name: label_6
+    properties: {text: Contact Us, font_size: 12, bold: true}
+    type: Label
+    layout_properties: {}
+- name: label_3
+  properties: {text: Gold Fitness Gym, bold: true, italic: false, underline: true,
+    font_size: 22}
+  type: Label
+  layout_properties: {slot: title}
